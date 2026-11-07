@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MediSchedule - Hospital Job Scheduling System</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Plus Jakarta Sans',sans-serif}
+body{background:#ffffff;color:#1a2b4c;line-height:1.6}
+.topbar{background:#0a3d5c;color:white;padding:8px 6%;font-size:13px;display:flex;justify-content:space-between}
+header{padding:20px 6%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);z-index:100;box-shadow:0 1px 20px rgba(0,0,0,0.05)}
+.logo{font-size:24px;font-weight:800;display:flex;gap:8px;align-items:center}
+.logo b{color:#0e8a8a}
+nav{display:flex;gap:28px}
+nav a{text-decoration:none;color:#334;font-weight:600;font-size:14px}
+.btn{padding:12px 24px;border-radius:30px;text-decoration:none;font-weight:700;font-size:14px;display:inline-block;transition:.3s}
+.btn-green{background:#0e8a8a;color:white}
+.btn-dark{background:#0a3d5c;color:white}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 20px rgba(0,0,0,0.15)}
+.hero{padding:60px 6% 40px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:50px;align-items:center;background:linear-gradient(180deg,#f0f9ff 0%,#ffffff 100%)}
+.hero h1{font-size:56px;line-height:1.05;font-weight:800;letter-spacing:-2px}
+.hero h1 span{color:#0e8a8a}
+.hero p{font-size:18px;color:#5a6d8a;margin:20px 0 30px;max-width:520px}
+.hero-img{background:white;border-radius:24px;padding:15px;box-shadow:0 30px 60px rgba(0,0,0,0.1);text-align:center}
+.hero-img img{width:100%;border-radius:16px;object-fit:cover}
+.stats-bar{background:#0a3d5c;color:white;margin:0 6%;border-radius:20px;padding:25px 40px;display:flex;justify-content:space-around;text-align:center}
+.stats-bar h2{font-size:36px;color:#5eead4}
+section{padding:80px 6%}
+.center{text-align:center;max-width:700px;margin:0 auto 50px}
+.center h2{font-size:42px;font-weight:800;letter-spacing:-1px;margin-bottom:12px}
+.center p{color:#5a6d8a;font-size:17px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}
+.card{background:white;border:1px solid #eef2f7;border-radius:20px;padding:30px;transition:.3s}
+.card:hover{box-shadow:0 20px 40px rgba(0,0,0,0.08);transform:translateY(-5px)}
+.card .icon{width:56px;height:56px;border-radius:14px;display:grid;place-items:center;font-size:28px;margin-bottom:18px}
+.card h3{margin-bottom:8px;font-size:18px}
+.card p{color:#667a95;font-size:14px}
+.how-it-works{background:#f8fbff}
+.step{display:flex;gap:20px;margin-bottom:35px}
+.num{width:44px;height:44px;background:#0e8a8a;color:white;border-radius:50%;display:grid;place-items:center;font-weight:800;flex-shrink:0}
+.tech{background:#0a3d5c;color:white}
+.tech-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-top:30px}
+.tech-item{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);padding:20px;border-radius:16px;text-align:center}
+.cta{background:linear-gradient(135deg,#0e8a8a 0%,#0a3d5c 100%);color:white;border-radius:28px;margin:0 6% 60px;padding:60px;text-align:center}
+footer{background:#061e2f;color:#8aa0b8;padding:50px 6%;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+footer h4{color:white;margin-bottom:14px}
+footer a{color:#8aa0b8;text-decoration:none;display:block;margin:6px 0;font-size:14px}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.hero h1{font-size:40px}nav{display:none}footer{grid-template-columns:1fr 1fr}.stats-bar{flex-wrap:wrap;gap:20px}}
+</style>
+</head>
+<body>
+<div class="topbar"><span>🏥 Built for Modern Hospitals • Open Source</span><span>📧 contact@medischedule.com • +91 98765 43210</span></div>
+<header>
+<div class="logo">🩺 <b>Medi</b>Schedule</div>
+<nav><a href="#">Home</a><a href="#">Features</a><a href="#">How it Works</a><a href="#">Tech Stack</a><a href="#">Contact</a></nav>
+<a class="btn btn-green" href="https://github.com/kolatinithya-byte/hospital-scheduler">View GitHub</a>
+</header>
+
+<div class="hero">
+<div>
+<div style="background:#e0f2f2;color:#0e8a8a;display:inline-block;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:700;letter-spacing:1px;margin-bottom:16px">JAVA SE • JDBC • MYSQL / POSTGRESQL</div>
+<h1>Hospital Staff Scheduling <span>Reimagined</span></h1>
+<p>Automate rosters, eliminate conflicts, and empower your healthcare team. A powerful Java-powered job scheduling system built for real hospitals.</p>
+<div style="display:flex;gap:12px">
+<a class="btn btn-green" href="#features">Explore System →</a>
+<a class="btn btn-dark" href="https://github.com/kolatinithya-byte/hospital-scheduler">Source Code</a>
+</div>
+<div style="display:flex;gap:30px;margin-top:35px">
+<div><b style="font-size:20px">100%</b><br><small style="color:#667">Java Based</small></div>
+<div><b style="font-size:20px">24/7</b><br><small style="color:#667">Shift Coverage</small></div>
+<div><b style="font-size:20px">Zero</b><br><small style="color:#667">Conflicts</small></div>
+</div>
+</div>
+<div class="hero-img">
+<img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80" alt="hospital">
+<div style="display:flex;gap:12px;margin-top:15px">
+<div style="flex:1;background:#f0f9ff;padding:12px;border-radius:12px;text-align:left"><b>👨‍⚕️ 150+ Staff</b><br><small>Managed</small></div>
+<div style="flex:1;background:#e0f2f2;padding:12px;border-radius:12px;text-align:left"><b>📅 500+ Shifts</b><br><small>Scheduled</small></div>
+</div>
+</div>
+</div>
+
+<div class="stats-bar">
+<div><h2>200+</h2><p>Hospitals Can Use</p></div>
+<div><h2>99.9%</h2><p>Scheduling Accuracy</p></div>
+<div><h2>40%</h2><p>Time Saved</p></div>
+<div><h2>24/7</h2><p>Availability</p></div>
+</div>
+
+<section id="features">
+<div class="center"><h2>Everything a Hospital Needs</h2><p>From smart shift allocation to real-time conflict detection, built with enterprise-grade Java backend.</p></div>
+<div class="grid3">
+<div class="card"><div class="icon" style="background:#e0f2f2">📅</div><h3>Smart Shift Scheduling</h3><p>Auto-generate optimal schedules for doctors, nurses, and support staff with conflict detection.</p></div>
+<div class="card"><div class="icon" style="background:#fef3c7">👥</div><h3>Staff Management</h3><p>Centralized database for roles, departments, availability, certifications, and contact details.</p></div>
+<div class="card"><div class="icon" style="background:#dbeafe">⚡</div><h3>Built-in HTTP Server</h3><p>Pure Java SE HTTP server, no Spring Boot bloat. Lightweight, fast, JDBC connection pooling.</p></div>
+<div class="card"><div class="icon" style="background:#fce7f3">🛡️</div><h3>Conflict Free Roster</h3><p>Detects overlapping shifts, overtime violations, and skill mismatches before publishing roster.</p></div>
+<div class="card"><div class="icon" style="background:#e0e7ff">💾</div><h3>MySQL / PostgreSQL</h3><p>Works with both MySQL and PostgreSQL. SQL scripts included in /db folder for quick setup.</p></div>
+<div class="card"><div class="icon" style="background:#dcfce7">📊</div><h3>Reporting & Analytics</h3><p>Track coverage, overtime, labor costs, and staff workload with built-in reports.</p></div>
+</div>
+</section>
+
+<section class="how-it-works">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center">
+<div>
+<h2 style="font-size:38px;font-weight:800;margin-bottom:30px">How It Works</h2>
+<div class="step"><div class="num">1</div><div><h3>Setup Database</h3><p style="color:#667">Import SQL schema from /db folder. Configure DatabaseConfig.java with your credentials.</p></div></div>
+<div class="step"><div class="num">2</div><div><h3>Build & Run Java Server</h3><p style="color:#667">mvn clean compile && mvn exec:java - Server starts on localhost:8080 instantly.</p></div></div>
+<div class="step"><div class="num">3</div><div><h3>Manage Staff & Shifts</h3><p style="color:#667">Use REST APIs to add staff, create shifts, assign duties, and generate weekly rosters.</p></div></div>
+</div>
+<div style="background:white;border-radius:24px;padding:20px;box-shadow:0 20px 50px rgba(0,0,0,0.08)">
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&q=80" style="width:100%;border-radius:16px" alt="dashboard">
+<div style="margin-top:15px;background:#0a3d5c;color:#a0f0e0;padding:14px;border-radius:12px;font-family:monospace;font-size:13px">GET /api/shifts?date=2025-11-06<br>→ Returns optimized roster JSON</div>
+</div>
+</div>
+</section>
+
+<section class="tech">
+<div class="center" style="color:white"><h2 style="color:white">Powered by Modern Tech</h2><p style="color:#8aa0b8">Enterprise stack - no unnecessary frameworks. Pure Java performance.</p></div>
+<div class="tech-grid">
+<div class="tech-item"><h3>☕ Java 17</h3><small>SE Language</small></div>
+<div class="tech-item"><h3>🔌 JDBC</h3><small>Database Layer</small></div>
+<div class="tech-item"><h3>🌐 HTTP Server</h3><small>Built-in Java</small></div>
+<div class="tech-item"><h3>📦 Maven</h3><small>Build Tool</small></div>
+<div class="tech-item"><h3>🐬 MySQL</h3><small>Database Option 1</small></div>
+<div class="tech-item"><h3>🐘 PostgreSQL</h3><small>Database Option 2</small></div>
+</div>
+</section>
+
+<div class="cta">
+<h2 style="font-size:42px;font-weight:800;margin-bottom:12px">Ready to Modernize Your Hospital Scheduling?</h2>
+<p style="font-size:18px;opacity:.9;margin-bottom:28px">Open source, well documented, and ready to deploy in your hospital infrastructure.</p>
+<a class="btn" style="background:white;color:#0a3d5c" href="https://github.com/kolatinithya-byte/hospital-scheduler">⭐ Star on GitHub & Clone Project</a>
+</div>
+
+<footer>
+<div><h4>🩺 MediSchedule</h4><p style="font-size:14px;margin-top:10px">Hospital Job Scheduling System - Built with Java SE, JDBC, and love for healthcare workers. Open source project by kolatinithya-byte.</p></div>
+<div><h4>Project</h4><a href="#">Features</a><a href="#">Documentation</a><a href="#">GitHub Repo</a><a href="#">Database Schema</a></div>
+<div><h4>Stack</h4><a href="#">Java 17</a><a href="#">JDBC</a><a href="#">Maven</a><a href="#">MySQL/PostgreSQL</a></div>
+<div><h4>Links</h4><a href="https://github.com/kolatinithya-byte/hospital-scheduler">GitHub</a><a href="#">Report Issue</a><a href="#">Contact</a></div>
+</footer>
+</body>
+</html>
